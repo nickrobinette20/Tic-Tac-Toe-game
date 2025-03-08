@@ -50,7 +50,7 @@ function takeTurn(div) {
       turn = "x";
       oWins();
       
-      if (!game && isTie()) {
+      if (!game && isTie() || !game && !isTie()) {
         document.getElementById("Text").innerText = "O is the Winnner";
       } else if (isTie() && game) {
         document.getElementById("Text").innerText = "its a tie";
@@ -60,7 +60,7 @@ function takeTurn(div) {
       turn = "circle";
       xWins();
       
-      if (!game && isTie()) {
+      if (!game && isTie() || !game && !isTie()) {
         document.getElementById("Text").innerText = "X is the Winnner";
       }else if (isTie() && game){
         document.getElementById("Text").innerText = "its a tie";
